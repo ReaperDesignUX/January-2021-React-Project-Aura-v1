@@ -1,0 +1,84 @@
+.nav-bar-flexbox {
+    min-width: 1095px;
+    width: 100vw;
+    background: url('images/navbar/retro-city-tokyo-dome.jpg');
+    justify-content: flex-start;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+}
+
+.logo-size {
+    width: 500px;
+    height: 132px;
+}
+
+/*
+.event-size {
+    display: none;
+    width: 350px;
+    height: 132px;
+    margin-right: -88px;
+    margin-left: -170px;
+}
+.event-size-hidden {
+    width: 500px;
+    height: 0px;
+    margin-right: -88px;
+    margin-left: -19px;
+    visibility: hidden;
+}
+*/
+
+.aura-member-size {
+    margin-top: 2.5rem;
+    width: 175px;
+    height: 50px;
+}
+
+.log-in {
+    /**/
+    position: relative;
+    margin: 0 0 90 27;
+}
+
+.prize-booth-size {
+    margin-top: 2.5rem;
+    width: 150px;
+    height: 50px;
+}
+
+.ticket-icon-size {
+    width: 100px;
+    height: 100px;
+    transform: rotate(33deg);
+}
+
+.ticket-counter {
+    background:    #920019;
+    padding:       1px 5px;
+    margin:        -1.3rem 0 0 0;
+    color:         black;
+    font:          normal bold 25px/1 "Droid Serif", serif;
+    text-align:    center;
+}
+
+.aura-coin {
+    width: 85px;
+    height: 85px;
+}
+
+.coin-counter {
+    background-color: gold;
+    padding:       1px 5px;
+    margin:        -0.4rem 0 0 0;
+    color:         black;
+    font:          normal bold 25px/1 "Droid Serif", serif;
+    text-align:    center;
+}
+
+.cart-size {
+    width: 85px;
+    height: 85px;
+    margin: 0;
+}

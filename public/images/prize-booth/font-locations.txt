@@ -1,0 +1,6 @@
+cars = row 3
+sports = row 1
+animals = page 2 row 1
+inflatables = row 4
+summer = row 2
+winter = row 8

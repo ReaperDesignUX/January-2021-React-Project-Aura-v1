@@ -1,0 +1,57 @@
+.game-container {
+    height: 100vh;
+    background-image: url('images/game-grid/retro-city-background2.png');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    display: grid;
+    grid-gap: 25px;
+    text-align: center;
+}
+
+/* hover game */
+.img-hover { opacity: 100; }
+.img-hover:hover { opacity: 0; }
+.game-hover { opacity: 0; }
+.game-hover:hover { opacity: 100; } 
+
+/* games */
+.game1-position {
+    position: absolute; 
+}
+
+.game1 {
+    color: white;
+    display: grid;
+    justify-content: center;
+}
+.game2 {
+    color: white;
+    display: grid;
+    justify-content: center;
+}
+.game3 {
+    color: white;
+}
+.game4 {
+    color: white;
+}
+.game5 {
+    color: white;
+}
+.game6 {
+    color: white;
+}
+.game7 {
+    color: white;
+}
+.game8 {
+    color: white;
+}
+.game9 {
+    color: white;
+}
+.game10 {
+    color: white;
+}

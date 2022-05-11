@@ -1,0 +1,431 @@
+body, html {
+    background-image: url(images/game-grid/retro-city-background2.png);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    overflow: hidden;
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/* colors */
+video, game1, game2, game3, game4, game5, game6, game7, game8, game9, game10, footer  {
+    color: white;
+}
+game1, game2, game3, game4, game5, game6, game7, game8, game9, game10 {
+    font-size: 50px;
+}
+
+/* containers */
+.homepage-flexbox {
+    display: flex;
+    flex-direction: column;
+}
+.homepage-container {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 0.05fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    height: 921px;
+    grid-gap: 100px;
+    text-align: center;
+    grid-template-areas:
+        "logo event aura-member category pb log-in ticket-icon ac-coin ac-aura cart-icon cart-aura"
+        "game1 game2 game3 game4 game5"
+        "game6 game7 game8 game9 game10"
+        "footer footer footer footer footer"
+}
+.nav-bar-flexbox {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    z-index: 50;
+}
+.nav-bar-container {
+    position: fixed;
+    background-image: url(images/prize-booth/retro-city-tokyo-dome.jpg);
+    display: grid;
+    grid-area: 1/1/1/8;
+    text-align: center;
+    grid-gap: 106.5px;
+    position: relative;
+    grid-template-areas:
+        "logo event category pb log-in ticket-icon ac-coin ac-aura cart-icon cart-aura"
+}
+.game-container {
+    background-image: url('images/game-grid/retro-city-background2.png');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    display: grid;
+    grid-gap: 25px;
+    grid-area: 2/1/7/8;
+    text-align: center;
+    margin: -100 0 0 0; /*bottom used to be 27px;*/
+    grid-template-areas: 
+        "game1 game2 game3 game4 game5"
+        "game6 game7 game8 game9 game10"
+}
+/* nav bar */
+logo {
+    grid-area: logo;
+    width: 200px;
+    height: 110px;
+}
+.logo-size {
+    width: 500px;
+    height: 132px;
+}
+.logo-placeholder {
+    width: 300px;
+    height: 80px;
+}
+event {
+    grid-area: event;
+    grid-area: 1/4/1/5;
+}
+.event-size {
+    display: none;
+    width: 350px;
+    height: 132px;
+    margin-right: -88px;
+    margin-left: -170px;
+}
+.event-size-hidden {
+    width: 500px;
+    height: 0px;
+    margin-right: -88px;
+    margin-left: -19px;
+    visibility: hidden;
+}
+.become-an-size {
+    margin: 30 0 -55 50;
+    color: aqua;
+    font-family: cursive;
+    font-size: 20px;
+}
+aura-member {
+    grid-area: aura-member;
+    grid-area: 1/18/1/1;
+}
+.aura-member-size {
+   margin: 51 0 0 60;
+   width: 175px;
+   height: 50px;
+}
+.for-exclusive-cosmetics {
+    margin: -3 0 0 55;
+    color: aqua;
+    font-family: cursive;
+    font-size: 18px;
+}
+category {
+    grid-area: category;
+    grid-area: 1/8/1/8;
+}
+/* Dropdown Button */
+.dropbtn {
+  background-color: #9900FF;
+  color: aqua;
+  margin: 52.5 15 0 0;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #9900FF;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: aqua;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* hover links color */
+.dropdown-content a:hover {background-color: #B23FFF;}
+
+/* hover dropdown menu */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* hovery category button & game categories */
+.dropdown:hover .dropbtn {background-color: #B23FFF;}
+
+log-in {
+    grid-area: log-in;
+    grid-area: 1/7/1/15;
+    position: relative;
+    margin: 0 0 90 27;
+}
+pb {
+    grid-area: pb;
+    grid-area: 1/1/1/24;
+}
+.prize-booth-size {
+    width: 150px;
+    height: 50px;
+    margin-top: 52.5px;
+}
+ticket-icon {
+    grid-area: 1/7/1/15;
+}
+.ticket-icon-size {
+    width: 100px;
+    height: 100px;
+    margin-top: 27.5px;
+    transform: rotate(33deg);
+}
+ticket-aura {
+    grid-area: 1/28/1/1;
+}
+.ticket-aura-size {
+    width: 100px;
+    height: 100px;
+    padding: 30 155 0 0;
+}
+/*
+.ticket-aura-rotate:hover {
+    justify-content: center;
+    animation-name: rotate-aura;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    position: relative;
+}
+@keyframes rotate-aura {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+*/
+ticket-counter {
+    grid-area: 1/26/1/1;
+    padding: 105 0 0 55;
+}
+.ticket-counter {
+background:    #920019;
+/*background:    linear-gradient(#ff0000, #ff5555);*/
+border:        0px solid #6fa8dc;
+border-radius: 0px;
+box-shadow:    0 0px #3d85c6;
+padding:       1px 5px;
+margin:        0 0 0 0;
+color:         black;
+display:       inline-block;
+font:          normal bold 25px/1 "Droid Serif", serif;
+text-align:    center;
+text-shadow:   0px 0px #000000;
+}
+ac-coin {
+    grid-area: ac-coin;
+    grid-area: 1/8/1/16;
+}
+ac-aura {
+    grid-area: ac-aura;
+    grid-area: 1/8/1/16;
+}
+.AC-size {
+    width: 85px;
+    height: 85px;
+    margin: 29 0 0 0;
+}
+.AC-aura-size {
+    width: 92px;
+    height: 92px;
+    margin: 26 0 0 0;
+}
+.AC-aura-size:hover {
+    justify-content: center;
+    animation-name: rotate-aura;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    position: relative;
+}
+@keyframes rotate-aura {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.coin-counter {
+background-color: gold;
+/*background:  linear-gradient(#ff0000, #ff5555);*/
+border:        0px solid #6fa8dc;
+border-radius: 0px;
+box-shadow:    0 0px #3d85c6;
+padding:       0px 5px;
+margin:        0 0 0 0;
+color:         black;
+display:       inline-block;
+font:          normal bold 25px/1 "Droid Serif", serif;
+text-align:    center;
+text-shadow:   0px 0px #000000;
+}
+coin-counter {
+    grid-area: 1/28/1/1;
+    padding: 107 0 0 63;
+}
+cart-icon {
+   grid-area: 1/15/1/10;
+}
+.cart-size {
+    width: 85px;
+    height: 85px;
+    margin: 35 20 0 0;
+}
+cart-aura {
+   grid-area: 1/15/1/10;
+}
+.cart-aura-size {
+    width: 85px;
+    height: 85px;
+    margin-top: 35px;
+}
+.cart-aura-size:hover {
+    justify-content: center;
+    animation-name: rotate-aura;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    position: relative;
+}
+@keyframes rotate-aura {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+cart-aura {
+   grid-area: 1/15/1/10;
+}
+.cart-aura-size {
+    width: 85px;
+    height: 85px;
+    margin-top: 35px;
+}
+
+
+/* hover game */
+.img-hover {
+    opacity: 100;
+}
+.img-hover:hover {
+    opacity: 0;
+    visibility: hidden;
+    z-index: 0;
+}
+.game-hover {
+    opacity: 0;
+}
+.game-hover:hover {
+    opacity: 100;
+} 
+/* games */
+.game1-img-position {
+    position: relative;
+    padding-bottom: 12.5%;
+    right: 43.75%;
+    width: 310px;
+    height: 177px;
+}
+.game1-gif-position {
+    position: relative;
+    top: -5.5%;
+    right: 5.6%;
+    width: 310px;
+    height: 330px;
+    background-attachment: fixed;
+    overflow-y: hidden;
+}
+.game1-gif-position:hover {
+    z-index: 1;
+}
+#game-popup-box {
+    background-color: green;
+    opacity: 0;
+}
+#game-popup-box:hover {
+    background-color: green;
+    opacity: 100;
+}
+/*Does not affect code*/
+game1 {
+    grid-area: game1;
+    /*
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    */
+}
+game2 {
+    grid-area: game2;
+}
+game3 {
+    grid-area: game3;
+}
+game4 {
+    grid-area: game4;
+}
+game5 {
+    grid-area: game5;
+}
+game6 {
+    grid-area: game6;
+}
+game7 {
+    grid-area: game7;
+}
+game8 {
+    grid-area: game8;
+}
+game9 {
+    grid-area: game9;
+}
+game10 {
+    grid-area: game10;
+}
+
+footer {
+    background-image: url(images/prize-booth/retro-city-tokyo-dome.jpg);
+    grid-area: footer;
+    background-color: #0B1F40;
+    position: relative;
+    bottom: -16px;
+    grid-area: 6/1/6/8;
+    z-index: 1;
+}
